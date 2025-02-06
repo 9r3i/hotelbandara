@@ -1,15 +1,159 @@
+user:pass|md5(sha1(<password>))|test|68358d5d9cbbf39fe571ba41f26524b6
+------------------------------------------------------------------------------------------------------
+let dhotel=await fetch('http://127.0.0.1:9304/hotel.json').then(r=>r.json());
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 
+next development
+-- change room
+-- 
+-- request order fb dan hk ke gudang
+-- request order gudang / purchasing
+-- request order mini bar
+-- stock review per days
+-- nota accounting dgn upload dan print
+-- fo registers add date
+-- account per coa, report
+-- laporan keuangan, sesuai dengan syarat audit pajak
+    - General Ledger
+    - Balance Sheet
+    - Profit and Loss
+    - Cash Flow
+    - Validasi Jurnal Umum
+    - Budget Anggaran (penghitungan otomatis akumulasi penyusutan aktiva)
+    - Tutup buku akhir priode super cepat
 
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+tatap matamu bagai busur panah yang kau lepaskan ke jantung hatiku
+meski kau simpan cintamu masih tetap nafasmu wangi hiasi suasana
+saat kukecup manis bibirmu
 
+chorus:
+  cintaku tak harus miliki dirimu
+  meski perih mengiris dari segala janji
 
+aku berdansa diujung gelisah diiringi syahdu lembut lakumu
+kau sebar benih anggun jiwamu namun kau tiada menuai buah cintaku
+yang ada hanya sekuntum rindu
 
+malam-malamku bagai malam seribu bintang yang terbentang di angkasa bila kau disini
+tuk sekedar menemani tuk melintasi wangi yang slalu tersaji di satu sisi hati
+------------------------------------------------------------------------------------------------------
+Aku jatuh cinta 'tuk kesekian kali
+Baru kali ini kurasakan cinta sesungguhnya
+Tak seperti dulu kali ini ada pengorbanan
 
+chorus:
+  Cinta bukan sekedar kata-kata indah
+  Cinta bukan sekedar buaian, belaian, peraduan
 
+Samudera cinta dari palung hati
+Tak terukur dalamnya hingga saat perpisahan tiba
+Mengundang air mata atau hanya secuil penyesalan
 
+Cinta adalah ruang dan waktu datang dan menghilang
+Semua karunia Sang Pencipta 
 
+chorus:
+  Mungkinkah kamu sedang menatap bulan?
+  Bulan sabit yang sedang kupandangi?
+  Mungkinkah kamu menangis diatas bintang khayalku?
 
+Maafkanlah cinta atas kabut jiwa
+Yang menutupi pandangan kalbu
 
+Cinta adalah ruang dan waktu datang dan menghilang
+Semua karunia Sang Pencipta
+------------------------------------------------------------------------------------------------------
+hidupku tanpa cintamu bagai malam tanpa bintang
+cintaku tanpa sambutmu bagai panas tanpa hujan
+jiwaku berbisik lirih ku harus milikimu
 
+chorus:
+    aku bisa membuatmu jatuh cinta kepadaku meski kau tak cinta kepadaku
+    beri sedikit waktu biar cinta datang karena telah terbiasa
+
+simpan mawar yang ku beri mungkin wanginya mengilhami
+sudikah dirimu untuk kenali aku dulu
+sebelum kau ludahi aku
+sebelum kau robek hatiku
+------------------------------------------------------------------------------------------------------
+aku tak mengerti apa yang kurasa rindu yang tak pernah begitu hebatnya
+aku mencintaimu lebih yang kau tau meski kau takkan pernah tau
+
+aku persembahkan hidupku untukmu telah relakan hatiku padamu
+namun kau masih bisu diam seribu bahasa dan hati kecilku bicara
+
+chorus:
+    baru kusadari cintaku bertepuk sebelah tangan
+    kau buat remuk seluruh hatiku
+
+semoga waktu akan mengilhami sisi hatimu yang beku
+semoga akan datang keajaiban hingga akhirnya kaupun mau
+aku mencintaimu lebih yang kau tau meski kau takkan pernah tau
+------------------------------------------------------------------------------------------------------
+
+Menurut Nabi Muhammad SAW, ada tujuh golongan yang dijamin akan dinaungi Allah SWT di Padang Mahsyar, yaitu:
+- Pemimpin yang adil
+- Pemuda yang tumbuh dalam keadaan beribadah kepada Allah 
+- Seseorang yang hatinya bergantung pada masjid 
+- Orang yang saling mencintai di jalan Allah 
+- Seorang laki-laki yang menolak diajak berzina 
+- Seseorang yang bersedekah 
+- Seseorang yang mengingat Allah dalam keadaan sendirian 
+
+Selain itu, ada beberapa golongan yang dijanjikan masuk surga, yaitu:
+    Orang-orang yang beriman dan berbuat baik
+    Orang-orang yang hijrah dan berjuang di jalan Allah
+    Orang-orang yang bertobat dan tidak menyembah setan
+    Orang-orang Islam yang beriman terhadap ayat-ayat Allah
+    Orang-orang yang tulus beriman kepada Allah 
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+menus
+- hrd (admin)
+  - dashboard (report of the week)
+  - request orders (request_order approval)
+  - employees
+  - users
+- front_office
+  - dashboard (occupation rooms)
+  - reservation (registration form)
+    - send tables:
+      - guest (insert/update)
+      - registration (insert)
+      - transaction  (insert)
+      - room_status (update)
+      - regid (insert)
+  - registers (registered rooms --> guests)
+  - room status
+  - extrabills
+  - extrabill items
+- purchasing
+  - stock opname
+  - request orders (create and process)
+    - 
+  - items (purcashing items -- table price)
+  - suppliers
+- housekeeping
+  - stock opname
+  - room status
+- 
+------------------------------------------------------------------------------------------------------
+
+call ldb ['localhost','hotel','9r3i','hotel'] query ""
+-----
+call ldb ['localhost','hotel','9r3i','hotel'] query "select * from coa where id=0"
+-----
+call ldb ['localhost','hotel','9r3i','hotel'] query "show columns coa raw"
+-----
+call ldb ['localhost','hotel','9r3i','hotel'] query "show tables"
+------------------------------------------------------------------------------------------------------
 
 
 
@@ -21,98 +165,610 @@
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
-front_office_direct_purchase
-- barcode
-- nama_barang
-- kategori
-- satuan
-- jumlah
 ------------------------------------------------------------------------------------------------------
-front_office_extrabill
-- nama_barang
-- kategori
-- charge
-- jumlah
 ------------------------------------------------------------------------------------------------------
-stock_barang --> next table --> stock_opname (real_stock)
-- barcode
-- nama_barang
-- merek
-- kategori
-- harga_modal
-- harga_jual
-- satuan_kecil
-- satuan_besar
-- stock
-  - kecil
-  - besar
-  - minimal
-  - maximal
 ------------------------------------------------------------------------------------------------------
-hk_request_stock
-- request_number
-- request_datetime
-- name (guest_name)
-- to (inventory)
-- status (open/close)
-  - nama_barang
-  - jumlah_permintaan
-  - jumlah_diterima
 ------------------------------------------------------------------------------------------------------
-hk_direct_order
-- request_number
-- request_datetime
-- name (guest_name)
-- to (inventory)
-- status (open/close)
-- grand_total
-  - nama_barang
-  - harga_satuan
-  - jumlah_po
-  - sub_total
 ------------------------------------------------------------------------------------------------------
-extra_bed
-- guest_name
-- company_name
-- room_number
-- room_type
-- quantity
-- arrival_date
-- departure_date
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
 
 ------------------------------------------------------------------------------------------------------
 
 
+
+-----------------------------------------------
+hotel transaction
+            0: (aid) [id:10] => LDB_AID
+            1: (time) [time:10] => LDB_TIME
+            2: (int) [regid:10] => LDB_BLANK
+            3: (int) [uid:10] => LDB_BLANK
+            4: (int) [amount:10] => "0"
+            5: (int) [deposit:10] => "0"
+            6: (int) [flow:1] => "0"
+            7: (int) [type:10] => "0"
 transaction
-- status (registration/reservation)
-- status_type (24 hours/6 hours)
-- market_category (regular/corporate/goverment/airlines/travel_agent)
-- market_segment (publish_rate/travel_agent/company_name/goverment_name)
-  - detail_company_name/detail_goverment_name
-- transaction_by
-- guest --> detail to guest table
-- arrival_date
-- departure_date
-- night (count of night stay)
-- guest_type (normal/vip/vvip/incognito)
-- guest_count (male/female/children)
-- extra_bed (night and quantity)
-- room_number (grouped by type)
-- payment_method (cash/transfer++/card/invoice/petty_cash)
-- note
-- payment_amount (int)
-- discount (int)
-- payment_discount
-- deposit (int)
-- balance (int)
+- id        aid()
+- time      time()
+- regid     int(10)
+- uid       int(10)
+- amount    int(10,0)
+- deposit   int(10,0)
+- flow      int(1,0)   // (0=out,1=in)
+- type      int(10,0)
+  - 1 = registration
+  - 2 = reservation
+  - 3 = extrabill
+  - 4 = request_order
+-----------------------------------------------
+atibs transaction
+            0: (aid) [id:10] => LDB_AID
+            1: (string) [name:100] => LDB_BLANK
+            2: (string) [type:100] => LDB_BLANK
+            3: (int) [profile_id:10] => "0"
+            4: (int) [method:1] => LDB_BLANK
+            5: (int) [nominal:15] => LDB_BLANK
+            6: (string) [transaction_date:100] => LDB_BLANK
+            7: (string) [transaction_code:100] => LDB_BLANK
+            8: (string) [status:100] => LDB_BLANK
+            9: (string) [report:512] => LDB_BLANK
+            10: (string) [evidence:100] => LDB_BLANK
+            11: (string) [explanation:100] => LDB_BLANK
+            12: (time) [time:10] => LDB_TIME
+            13: (date) [date:10] => LDB_DATE
+            14: (string) [account:50] => "0"
+            15: (string) [data:30000] => LDB_BLANK
+            16: (int) [year:4] => "2024"
+            17: (int) [month:2] => "0"
+            18: (int) [uid:10] => "0"
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+[table_relation]
+-----------------------+------------------------------
+item_stock --> price   | housekeeping and purcashing
+price      --> coa     | housekeeping and purcashing
+-----------------------+------------------------------
+----------------------------+---------------
+extrabill     --> coa       | front_office
+minibar_stock --> extrabill | front_office
+----------------------------+---------------
+TASKS
+  - add extrabill_cart deposit column
+  - remove unready apps from _Hotel.apps
+  - add open button for transactions page on accounting division
+  - add payment_receipt for restaurant payments table on food_baverage division
+
+  0:'',
+  1:'purchase_order',
+  2:'registration',
+  3:'extrabill_cart',
+  4:'request_order',
+  5:'payment',
+  6:'room_service',
+  7:'restaurant',
+  8:'payment_resto',
+  9:'adjustment',
+  
 
 ------------------------------------------------------------------------------------------------------
-reservation
-- id           aid()
-- guest_name   string(100)
-- guest_type   string(normal/vip/vvip/)
+paid_ar
+- id        aid()
+- time      time()
+- coa_id    int(10)
+- amount    int(10,0)
+- date      string(20)
+- market    string(100)
+- name      string(100)
+- evidence  string(100)
+- note      string(100)
+- data      string(2048)
+- deposit   int(10,0)
+-------------------------
+create table paid_ar id=aid()&time=time()&coa_id=int(10)&amount=int(10,0)&date=string(20)&market=string(100)&name=string(100)&evidence=string(100)&note=string(100)&data=string(2048)&deposit=int(10,0)
+------------------------------------------------------------------------------------------------------
+purchase_order
+- id        aid()
+- regid     int(10)
+- time      time()
+- uid       int(10)
+- estimate  int(10,0)
+- status    int(2,0)      // pending=0,done=1,draft=2,approve=3
+- note      string(100)
+- data      string(2048)  // item_id,count,nominal
+--------------------------
+create table purchase_order id=aid()&regid=int(10)&time=time()&uid=int(10)&estimate=int(10,0)&status=int(2,0)&note=string(100)&data=string(2048)
+------------------------------------------------------------------------------------------------------
+item_stock_hk
+- id            aid()
+- update        time()
+- item_id       int(10)
+- stock         int(10,0)
+- group         int(10,0)
+- stock_min     int(10,0)
+- stock_max     int(10,10)
+-----------------------
+create table item_stock_hk id=aid()&update=time()&item_id=int(10)&stock=int(10,0)&group=int(10,0)&stock_min=int(10,0)&stock_max=int(10,10)
+------------------------------------------------------------------------------------------------------
+item_stock_fb
+- id            aid()
+- update        time()
+- item_id       int(10)
+- stock         int(10,0)
+- group         int(10,0)
+- stock_min     int(10,0)
+- stock_max     int(10,10)
+-----------------------
+create table item_stock_fb id=aid()&update=time()&item_id=int(10)&stock=int(10,0)&group=int(10,0)&stock_min=int(10,0)&stock_max=int(10,10)
+------------------------------------------------------------------------------------------------------
+change_room
+- id          aid()
+- time        time()
+- uid         int(10)
+- from        int(10)
+- to          int(10)
+- guest_id    int(10)
+- guest_name  string(100)
+- note        string(100)
+- guest_card_id string(100)
+-----------------------------
+create table change_room id=aid()&time=time()&uid=int(10)&from=int(10)&to=int(10)&guest_id=int(10)&guest_name=string(100)&note=string(100)&guest_card_id=string(100)
+------------------------------------------------------------------------------------------------------
+asset - coa_id
+- id          aid()
+- time        time()
+- coa_id      int(10,0)
+- nominal     int(10,0)
+- name        string(100)
+- note        string(100)
+- year        int(4,2024)
+----------------------------
+create table asset id=aid()&time=time()&coa_id=int(10,0)&nominal=int(10,0)&name=string(100)&note=string(100)&year=int(4,2024)
+------------------------------------------------------------------------------------------------------
+adjustment - coa_id, item_id
+- id          aid()
+- time        time()
+- year        int(4,2024)
+- month       int(2,0)
+- date        int(2,1)
+- flow        int(1,0)
+- coa_id      int(10,0)
+- amount      int(10,0)
+- deposit     int(10,0)
+- item_id     int(10,0)
+- name        string(100)
+- note        string(100)
+- regid       int(10,0)
+- status      int(10,0)
+---------------------------
+create table adjustment id=aid()&time=time()&year=int(4,2024)&month=int(2,0)&date=int(2,1)&flow=int(1,0)&coa_id=int(10,0)&amount=int(10,0)&deposit=int(10,0)&item_id=int(10,0)&name=string(100)&note=string(100)&regid=int(10,0)&status=int(10,0)
+------------------------------------------------------------------------------------------------------
+minibar_stock
+- id            aid()
+- update        time()
+- item_id       int(10)
+- stock         int(10,0)
+- group         int(10,0)
+- stock_min     int(10,0)
+- stock_max     int(10,10)
+-----------------------
+create table minibar_stock id=aid()&update=time()&item_id=int(10)&stock=int(10,0)&group=int(10,0)&stock_min=int(10,0)&stock_max=int(10,10)
+------------------------------------------------------------------------------------------------------
+payment_resto
+- id              aid()
+- time            time()
+- regid           int(10)
+- uid             int(10)
+- flow            int(1,0)    // (0=out/1=in)
+- nominal         int(10,0)
+- cashback        int(10,0)
+- type            int(3,0)    // (0=deposit/1=front_office/2=restaurant/3=laundry/4=spa/5=extrabill/6=final)
+- status          int(1,0)
+- method          string(20)  // (cash/card_bca/card_mandiri/wire_bca/wire_mandiri/petty_cash/account_receivable)
+- note            string(100)
+- bearer          string(100)
+- paid            int(10,0)
+- data            string(2048)
+-------------------------------
+create table payment_resto id=aid()&time=time()&regid=int(10)&uid=int(10)&flow=int(1,0)&nominal=int(10,0)&cashback=int(10,0)&type=int(3,0)&status=int(1,0)&method=string(20)&note=string(100)&bearer=string(100)&paid=int(10)&data=string(2048)
+------------------------------------------------------------------------------------------------------
+restaurant
+- id          aid()
+- time        time()
+- regid       int(10)
+- uid         int(10)
+- total       int(10,0)
+- status      int(10,0)
+- number      int(10,0)
+- name        string(100)
+- data        string(2048)
+----------------------------
+create table restaurant id=aid()&time=time()&regid=int(10)&uid=int(10)&total=int(10,0)&status=int(10,0)&number=int(10,0)&name=string(100)&data=string(2048)
+------------------------------------------------------------------------------------------------------
+room_service
+- id          aid()
+- time        time()
+- regid       int(10)
+- uid         int(10)
+- total       int(10,0)
+- status      int(10,0)
+- room_number int(10,0)
+- guest_name  string(100)
+- data        string(2048)
+---------------------------
+create table room_service id=aid()&time=time()&regid=int(10)&uid=int(10)&total=int(10,0)&status=int(10,0)&room_number=int(10,0)&guest_name=string(100)&data=string(2048)
+------------------------------------------------------------------------------------------------------
+menu
+- id        aid()
+- time      time()
+- category  int(10,0)
+- type      int(10,0)
+- price     int(10,0)
+- unit      string(20)
+- name      string(100)
+- note      string(100)
+------------------------
+create table menu id=aid()&time=time()&category=int(10,0)&type=int(10,0)&price=int(10,0)&unit=string(20)&name=string(100)&note=string(100)
+------------------------------------------------------------------------------------------------------
+payment
+- id              aid()
+- time            time()
+- regid           int(10)
+- uid             int(10)
+- flow            int(1,0)    // (0=out/1=in)
+- nominal         int(10,0)
+- cashback        int(10,0)
+- type            int(3,0)    // (0=deposit/1=front_office/2=restaurant/3=laundry/4=spa/5=extrabill/6=final)
+- status          int(1,0)
+- method          string(20)  // (cash/card_bca/card_mandiri/wire_bca/wire_mandiri/petty_cash/account_receivable)
+- note            string(100)
+- bearer          string(100)
+- paid            int(10,0)
+- data            string(2048)
+-------------------------------
+create table payment id=aid()&time=time()&regid=int(10)&uid=int(10)&flow=int(1,0)&nominal=int(10,0)&cashback=int(10,0)&type=int(3,0)&status=int(1,0)&method=string(20)&note=string(100)&bearer=string(100)&paid=int(10)&data=string(2048)
+------------------------------------------------------------------------------------------------------
+item_supplier
+- id          aid()
+- time        time()
+- item_id     int(10)
+- supplier_id int(10)
+- cost        int(10,0)
+----------------------------
+create table item_supplier id=aid()&time=time()&item_id=int(10)&supplier_id=int(10)&cost=int(10,0)
+------------------------------------------------------------------------------------------------------
+extrabill_cart
+- id        aid()
+- time      time()
+- regid     int(10)
+- uid       int(10)
+- total     int(10,0)
+- data      string(2048)
+- status    int(10,0)
+------------------------
+create table extrabill_cart id=aid()&time=time()&regid=int(10)&uid=int(10)&total=int(10,0)&data=string(2048)&status=int(10,0)
+------------------------------------------------------------------------------------------------------
+extrabill
+- id      aid()
+- time    time()
+- coa_id  int(10)
+- price   int(10,0)
+- name    string(100)
+----------------------
+create table extrabill id=aid()&time=time()&coa_id=int(10)&price=int(10,0)&name=string(100)
+------------------------------------------------------------------------------------------------------
+coa
+- id        aid()
+- time      time()
+- code      int(10)
+- parent    int(10)
+- name      string(50)
+- type      string(50)
+- variable  string(50)
+-----------------------
+create table coa id=aid()&time=time()&code=int(10)&parent=int(10)&name=string(50)&type=string(50)&variable=string(50)
+------------------------------------------------------------------------------------------------------
+request_order
+- id          aid()
+- regid       int(10)
+- time        int()
+- uid         int(10)
+- estimate    int(10,0)
+- status      int(2,0)
+- note        string(100)
+--------------------------
+create table request_order id=aid()&regid=int(10)&time=time()&uid=int(10)&estimate=int(10,0)&status=int(2,0)&note=string(100)
+------------------------------------------------------------------------------------------------------
+item_order
+- id        aid()
+- regid     int(10)
+- time      time()
+- item_id   int(10)
+- nominal   int(10,0)
+- count     int(10,0)
+-----------------------
+create table item_order id=aid()&regid=int(10)&time=time()&item_id=int(10)&nominal=int(10,0)&count=int(10,0)
+------------------------------------------------------------------------------------------------------
+item_stock
+- id            aid()
+- update        time()
+- item_id       int(10)
+- stock         int(10,0)
+- group         int(10,0)
+- stock_min     int(10,0)
+- stock_max     int(10,10)
+-----------------------
+create table item_stock id=aid()&update=time()&item_id=int(10)&stock=int(10,0)&group=int(10,0)&stock_min=int(10,0)&stock_max=int(10,10)
+------------------------------------------------------------------------------------------------------
+supplier
+- id            aid()
+- time          time()
+- phone         string(20)
+- company_name  string(100)
+- contact_name  string(100)
+- bank_account  string(20)
+- bank_name     string(50)
+- email         string(50)
+- address       string(100)
+- contact_phone string(20)
+- fax           string(20)
+-------------------------------
+create table supplier id=aid()&time=time()&phone=string(20)&company_name=string(100)&contact_name=string(100)&bank_account=string(20)&bank_name=string(50)&email=string(50)&contact_phone=string(20)&fax=string(20)&address=string(100)
+------------------------------------------------------------------------------------------------------
+transaction
+- id        aid()
+- time      time()
+- regid     int(10)
+- uid       int(10)
+- amount    int(10,0)
+- deposit   int(10,0)
+- flow      int(1,0)   // (0=out,1=in)
+- type      int(10,0)
+- date      int(2,1)
+- month     int(2,0)
+- year      int(4,2024)
+- status    int(10,0)
+------------------------
+create table transaction id=aid()&time=time()&regid=int(10)&uid=int(10)&amount=int(10,0)&deposit=int(10,0)&flow=int(1,0)&type=int(10,0)&date=int(2,1)&month=int(2,0)&year=int(4,2024)&status=int(10,0)
+-----------------------------
+into transaction
+update transaction
+------------------------------------------------------------------------------------------------------
+registration
+- id                aid()
+- time              time()
+- employee_id       int(10)
+- guest_id          int(10,0)
+- guest_name        string(100)
+- type              string(20)     (registration/reservation)
+- regid             int(10)
+- nights            int(10,1)
+- date_arrival      string(20)
+- date_departure    string(20)
+- market_category   string(50)
+- market_segment    string(50)
+- market_name       string(100)
+- head_count_child  int(10,0)
+- head_count_female int(10,0)
+- head_count_male   int(10,0)
+- note              string(256)
+- room_number       int(10)
+- extra_bed_count   int(10,0)
+- extra_bed_night   int(10,0)
+- payment_amount    int(10,0)
+- payment_deposit   int(10,0)
+- payment_discount  int(10,0)
+- payment_method    string(20)
+--------------------------------
+create table registration id=aid()&time=time()&employee_id=int(10)&guest_id=int(10)&guest_name=string(100)&type=string(20)&regid=int(10)&nights=int(10,1)&date_arrival=string(20)&date_departure=string(20)&market_category=string(50)&market_segment=string(50)&market_name=string(100)&head_count_child=int(10,0)&head_count_female=int(10,0)&head_count_male=int(10,0)&note=string(256)&room_number=int(10)&extra_bed_count=int(10,0)&extra_bed_night=int(10,0)&payment_amount=int(10,0)&payment_deposit=int(10,0)&payment_discount=int(10,0)&payment_method=string(20)
+------------------------------------------------------------------------------------------------------
+regid
+- id    aid()
+- uid   int(10)    // required
+- time  time()
+- type  int(10,0)
+  - 0  = unknown
+  - 1  = registration
+  - 2  = reservation
+  - 3  = extra
+  - 4  = purchasing
+  - 5  = 
+----------------------
+create table regid id=aid()&uid=int(10)&type=int(10,0)&time=time()
+------------------------------------------------------------------------------------------------------
+price
+- id              aid()
+- category        int(10)      // coa_id
+- time            time()
+- nominal         int(10)      // selling price
+- purchase        int(10)      // purchase price
+- division        string(50)   //
+- name            string(100)
+- mark            string(100)
+- unit            string(20)   // (gr/kg/pcs/bottle/)
+-------------------------------
+create table price id=aid()&category=int(10)&time=time()&nominal=int(10)&purchase=int(10)&division=string(50)&name=string(100)&mark=string(100)&unit=string(20)
+------------------------------------------------------------------------------------------------------
+market
+- id          aid()
+- category    string(50)  // (regular/corporate/government/airlines/travel_agent)
+- segment     string(50)  // (publish_rate/travel_agent/company_name/goverment_name)
+- name        string(100)  // company_name
+- address     string(100)
+- telp        string(20)
+- email       string(50)
+- time        time()
+---------------------------
+create table market id=aid()&category=string(50)&segment=string(50)&name=string(100)&address=string(100)&telp=string(20)&email=string(50)&time=time()
+------------------------------------------------------------------------------------------------------
+room_status (dynamic-realtime)
+- id          aid()
+- room_id     int(10)
+- code        int(3,0)
+- update      time()
+-------------------------
+create table room_status id=aid()&room_id=int(10)&code=int(3,0)&update=time()
+------------------------------------------------------------------------------------------------------
+room (static)
+- id            aid()
+- name          string(100)    // (executive/deluxe/superior)
+- type          string(50)     // (twin/double)
+- code          string(20)     // (xd/xt/dd/dt/sd/st)
+- number        int(10)
+- floor         int(10)
+- normal_rate   int(10)
+- weekend_rate  int(10)
+- six_hours     int(10)
+- tax           int(10)
+- vip           int(1)
+- smoking       int(1)
+--------------------------
+create table room id=aid()&name=string(100)&type=string(50)&code=string(20)&number=int(10)&floor=int(2)&normal_rate=int(10)&weekend_rate=int(10)&six_hours=int(10)&tax=int(10)&vip=int(1)&smoking=int(1)
+------------------------------------------------------------------------------------------------------
+guest
+- id          aid()
+- name        string(100)
+- position    string(50)  // (guest/member)
+- time        time()
+- card_id     string(50)
+- card_type   string(50)  //(ktp/sim/passport/other)
+- address     string(256)
+- birthdate   string(100)
+- birthplace  string(100)
+- gender      int(1,0)
+- phone       string(20)
+- email       string(100)
+- religion    string(50)
+- nationality string(50)
+- greet       string(20)  //(Mr/Mrs/Ms)
+- guest_type  string(50)  // (solo/group/family/vip/vvip/membership/luxury/wellness/Business/Vacationers)
+- group_name  string(50)
+- member_id   int()       // membership
+---------------------------------------
+create table guest id=aid()&name=string(100)&position=string(50)&time=time()&card_id=string(50)&card_type=string(50)&address=string(256)&birthdate=string(50)&birthplace=string(100)&gender=int(1,0)&phone=string(20)&email=string(100)&religion=string(50)&nationality=string(50)&greet=string(20)&guest_type=string(50)&group_name=string(50)&member_id=int(10,0)
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+*** LOGIN ***
+------------------------------------------------------------------------------------------------------
+--------------- steps ---------------
+1. browser --> request new otp to server --> /api/eva/?query=hotelget.otp/
+           --> show qr_code contains new otp
+           --> continuesly check for otp update to server --> /api/eva/?query=hotelget.otp_check/<otp_code> 
+2. phone   --> scan/get otp from browser qr_code
+           --> send oauth to server using otp from browser --> --> /api/eva/?query=hotelget.otp_oauth/<otp_code> 
+           --> 
+3. browser --> if check is success, do checking 
+--------------- steps ---------------
+- browser --> server:request:otp   --> /api/eva/?query=hotelget.otp/
+              --> response:otp
+          --> browser:generate qr_code from otp
+          --> server:check_otp_update
+              --> response:new_access_data
+          --> browser:generate_new_app from new_access_data
+- phone   --> browser:scan_otp
+          --> server:oauth
+              - otp   = scanned_otp
+              --> response:new_access_data
+          --> phone:mark_as_success
+------------------------------------------------------------------------------------------------------
+auth
+- id        aid()
+- otp       string(100)
+- time      time()
+- used      int(1,0)
+- token     string(100)
+--------------------------
+create table auth id=aid()&otp=string(100)&time=time()&used=int(1,0)&token=string(100)
+------------------------------------------------------------------------------------------------------
+access
+- id       aid()
+- uid      int(10)
+- active   int(1,1)
+- time     time()
+- token    string(100)
+- userdata string(1024) // json
+- platform string(100)
+-------------------------------
+create table access id=aid()&uid=int(10)&active=int(1,1)&time=time()&token=string(100)&userdata=string(1024)&platform=string(100)
+------------------------------------------------------------------------------------------------------
+employee
+- id          aid()
+- name        string()
+- position    string()  // divisions -->
+- time        time()
+- card_id     string()
+- card_type   string()
+- address     string()
+- birthdate   string()
+- birthplace  string()
+- gender      int()
+- phone       string()
+- email       string()
+- religion    string()
+- nationality string()
+- division    string()
+----------------------
+create table employee id=aid()&name=string(100)&position=string(100)&time=time()&card_id=string(50)&card_type=string(50)&address=string(256)&birthdate=string(100)&birthplace=string(100)&gender=int(1,0)&phone=string(20)&email=string(100)&religion=string(50)&nationality=string(50)&division=string(100)
+------------------------------------------------------------------------------------------------------
+user
+- id         aid()
+- username   string(100)
+- passcode   string(100)
+- privilege  int(2,1)
+- scope      string(100)
+- active     int(1,1)
+- type       string(100)
+- profile_id int(10)
+- time       time()
+------------------------
+create table user id=aid()&username=string(100)&passcode=string(100)&privilege=int(2,1)&scope=string(100)&active=int(1,1)&type=string(100)&profile_id=int(10)&position=string(100)
+------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+room_status_info (static)
+- id      aid()
+- code    int(3,0)
+- name    string(50)
+- detail  string(100)
+-----------------------------------------------
+create table room_status_info id=aid()&code=int(3,0)&name=string(50)&detail=string(100)
+-----------------------------------------------
+0  Unknown             Tidak diketahui
+1  Checkout            Tamu baru saja checkout
+2  General Cleaning    Kamar dalam tahap pembersihan global / Pesto Control
+3  Out Of Order        Kamar rusak (Tidak dapat dijual)
+4  Vacant Dirty        Kamar checkout yang sudah diassign room attendant untuk membersihkan kamar
+5  Vacant Clean        Kamar yang sudah dibersihkan room attendant namun belum dicek oleh Leader HK
+6  Vacant Ready        Kamar yang sudah dicek kelengkapannya dan siap untuk dijual
+7  Vacant Uncheck      Kamar yang harus dicek kelengkapannya jika kamar belum terjual
+8  Arrival             Kamar reservasi yang akan menginap pada H-0
+9  Incognito           Tamu yang inign dirahasiakan keberadaannya
+10 Dont Distrub        Kamar terisi dan tamu meminta untuk tidak diganggu
+11 Occupied Dirty      Kamar terisi (extend) yang akan diassign room attendant untuk membersihkan kamar
+12 Makeup Room         Kamar terisi yang telah di assign room attendant untuk membersihkan kamar
+13 Occupied clean      Kamar terisi dan telah selesai dibersihkan oleh room attandent
+14 Occupied Ready      Kamar terisi yang sudah dibersihkan/tamu baru saja checkin
+15 House Use           Kamar yang digunakan oleh staff hotel
+16 Sleep Out           Kamar yang sudah dibayar oleh tamu dan tidak ditempati
+17 Skipper             Tamu yang meninggalkan kamar tanpa ada informasi dari Front Office
+18 Expected Departure  Kamar yang akan checkout
+------------------------------------------------------------------------------------------------------
+insert into room_status_info code=0&name=Unknown&detail=Tidak+diketahui;insert into room_status_info code=1&name=Checkout&detail=Tamu+baru+saja+checkout;insert into room_status_info code=2&name=General+Cleaning&detail=Kamar+dalam+tahap+pembersihan+global+%2F+Pesto+Control;insert into room_status_info code=3&name=Out+Of+Order&detail=Kamar+rusak+%28Tidak+dapat+dijual%29;insert into room_status_info code=4&name=Vacant+Dirty&detail=Kamar+checkout+yang+sudah+diassign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=5&name=Vacant+Clean&detail=Kamar+yang+sudah+dibersihkan+room+attendant+namun+belum+dicek+oleh+Leader+HK;insert into room_status_info code=6&name=Vacant+Ready&detail=Kamar+yang+sudah+dicek+kelengkapannya+dan+siap+untuk+dijual;insert into room_status_info code=7&name=Vacant+Uncheck&detail=Kamar+yang+harus+dicek+kelengkapannya+jika+kamar+belum+terjual+setelah+melalui+night+audit;insert into room_status_info code=8&name=Arrival&detail=Kamar+reservasi+yang+akan+menginap+pada+H-0;insert into room_status_info code=9&name=Incognito&detail=Tamu+yang+inign+dirahasiakan+keberadaannya;insert into room_status_info code=10&name=Dont+Distrub&detail=Kamar+terisi+dan+tamu+meminta+untuk+tidak+diganggu;insert into room_status_info code=11&name=Occupied+Dirty&detail=Kamar+terisi+%28extend%29+yang+akan+diassign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=12&name=Makeup+Room&detail=Kamar+terisi+yang+telah+di+assign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=13&name=Occupied+clean&detail=Kamar+terisi+dan+telah+selesai+dibersihkan+oleh+room+attandent;insert into room_status_info code=14&name=Occupied+Ready&detail=Kamar+terisi+yang+sudah+dibersihkan%2Ftamu+baru+saja+checkin;insert into room_status_info code=15&name=House+Use&detail=Kamar+yang+digunakan+oleh+staff+hotel;insert into room_status_info code=16&name=Sleep+Out&detail=Kamar+yang+sudah+dibayar+oleh+tamu+dan+tidak+ditempati;insert into room_status_info code=17&name=Skipper&detail=Tamu+yang+meninggalkan+kamar+tanpa+ada+informasi+dari+Front+Office;insert into room_status_info code=18&name=Expected+Departure&detail=Kamar+yang+akan+checkout
 ------------------------------------------------------------------------------------------------------
 ===== employee input =====
 -- level: 
@@ -193,153 +849,6 @@ insert into employee name=Dediono&position=Room Attendant&card_id=18010408098500
 -- scope: gardener
 insert into employee name=Yogi Budi Utama&position=Gardener&card_id=1671042810910010&card_type=KTP&address=jln. Candi mas rt. 017%2Frw. 007&birthplace=Palembang&birthdate=28-10-1991&gender=1&phone=082182064521&email=yogibudiutama246@gmail.com&religion=Islam&nationality=Indonesia
 ------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-room_status_info (static)
-- id      aid()
-- code    int(3,0)
-- name    string(50)
-- detail  string(100)
------------------------------------------------
-create table room_status_info id=aid()&code=int(3,0)&name=string(50)&detail=string(100)
------------------------------------------------
-0   Unknown             Tidak diketahui
-1 	Checkout 	          Tamu baru saja checkout
-2 	General Cleaning 	  Kamar dalam tahap pembersihan global / Pesto Control
-3	  Out Of Order 	      Kamar rusak (Tidak dapat dijual)
-4	  Vacant Dirty 	      Kamar checkout yang sudah diassign room attendant untuk membersihkan kamar
-5 	Vacant Clean 	      Kamar yang sudah dibersihkan room attendant namun belum dicek oleh Leader HK
-6 	Vacant Ready 	      Kamar yang sudah dicek kelengkapannya dan siap untuk dijual
-7   Vacant Uncheck 	    Kamar yang harus dicek kelengkapannya jika kamar belum terjual setelah melalui night audit
-8	  Arrival 	          Kamar reservasi yang akan menginap pada H-0
-9 	Incognito 	        Tamu yang inign dirahasiakan keberadaannya
-10	Dont Distrub  	    Kamar terisi dan tamu meminta untuk tidak diganggu
-11	Occupied Dirty 	    Kamar terisi (extend) yang akan diassign room attendant untuk membersihkan kamar
-12	Makeup Room 	      Kamar terisi yang telah di assign room attendant untuk membersihkan kamar
-13 	Occupied clean 	    Kamar terisi dan telah selesai dibersihkan oleh room attandent
-14 	Occupied Ready 	    Kamar terisi yang sudah dibersihkan/tamu baru saja checkin
-15	House Use 	        Kamar yang digunakan oleh staff hotel
-16	Sleep Out 	        Kamar yang sudah dibayar oleh tamu dan tidak ditempati
-17 	Skipper 	          Tamu yang meninggalkan kamar tanpa ada informasi dari Front Office
-18 	Expected Departure 	Kamar yang akan checkout
-------------------------------------------------------------------------------------------------------
-insert into room_status_info code=0&name=Unknown&detail=Tidak+diketahui;insert into room_status_info code=1&name=Checkout&detail=Tamu+baru+saja+checkout;insert into room_status_info code=2&name=General+Cleaning&detail=Kamar+dalam+tahap+pembersihan+global+%2F+Pesto+Control;insert into room_status_info code=3&name=Out+Of+Order&detail=Kamar+rusak+%28Tidak+dapat+dijual%29;insert into room_status_info code=4&name=Vacant+Dirty&detail=Kamar+checkout+yang+sudah+diassign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=5&name=Vacant+Clean&detail=Kamar+yang+sudah+dibersihkan+room+attendant+namun+belum+dicek+oleh+Leader+HK;insert into room_status_info code=6&name=Vacant+Ready&detail=Kamar+yang+sudah+dicek+kelengkapannya+dan+siap+untuk+dijual;insert into room_status_info code=7&name=Vacant+Uncheck&detail=Kamar+yang+harus+dicek+kelengkapannya+jika+kamar+belum+terjual+setelah+melalui+night+audit;insert into room_status_info code=8&name=Arrival&detail=Kamar+reservasi+yang+akan+menginap+pada+H-0;insert into room_status_info code=9&name=Incognito&detail=Tamu+yang+inign+dirahasiakan+keberadaannya;insert into room_status_info code=10&name=Dont+Distrub&detail=Kamar+terisi+dan+tamu+meminta+untuk+tidak+diganggu;insert into room_status_info code=11&name=Occupied+Dirty&detail=Kamar+terisi+%28extend%29+yang+akan+diassign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=12&name=Makeup+Room&detail=Kamar+terisi+yang+telah+di+assign+room+attendant+untuk+membersihkan+kamar;insert into room_status_info code=13&name=Occupied+clean&detail=Kamar+terisi+dan+telah+selesai+dibersihkan+oleh+room+attandent;insert into room_status_info code=14&name=Occupied+Ready&detail=Kamar+terisi+yang+sudah+dibersihkan%2Ftamu+baru+saja+checkin;insert into room_status_info code=15&name=House+Use&detail=Kamar+yang+digunakan+oleh+staff+hotel;insert into room_status_info code=16&name=Sleep+Out&detail=Kamar+yang+sudah+dibayar+oleh+tamu+dan+tidak+ditempati;insert into room_status_info code=17&name=Skipper&detail=Tamu+yang+meninggalkan+kamar+tanpa+ada+informasi+dari+Front+Office;insert into room_status_info code=18&name=Expected+Departure&detail=Kamar+yang+akan+checkout
-------------------------------------------------------------------------------------------------------
-room_status (dynamic)
-- id          aid()
-- room_id     int(10)
-- code        int(3,0)
-- update      time()
--------------------------
-create table room_status id=aid()&room_id=int(10)&code=int(3,0)&update=time()
-------------------------------------------------------------------------------------------------------
-room (static)
-- id            aid()
-- name          string(100)    // (executive/deluxe/superior)
-- type          string(50)     // (twin/double)
-- code          string(20)     // (xd/xt/dd/dt/sd/st)
-- number        int(10)
-- floor         int(10)
-- normal_rate   int(10)
-- weekend_rate  int(10)
-- six_hours     int(10)
-- tax           int(10)
-- vip           int(1)
-- smoking       int(1)
---------------------------
-create table room id=aid()&name=string(100)&type=string(50)&code=string(20)&number=int(10)&floor=int(2)&normal_rate=int(10)&weekend_rate=int(10)&six_hours=int(10)&tax=int(10)&vip=int(1)&smoking=int(1)
-------------------------------------------------------------------------------------------------------
-guest
-- id          aid()
-- name        string(100)
-- position    string(50)  // (guest/member)
-- time        time()
-- card_id     string(50)
-- card_type   string(50)  //(ktp/sim/passport/other)
-- address     string(256)
-- birthdate   string(100)
-- birthplace  string(100)
-- gender      int(1,0)
-- phone       string(20)
-- email       string(100)
-- religion    string(50)
-- nationality string(50)
-- greet       string(20)  //(Mr/Mrs/Ms)
-- guest_type  string(50)  // (solo/group/family/vip/vvip/membership/luxury/wellness/Business/Vacationers)
-- group_name  string(50)
-- member_id   int()       // membership
----------------------------------------
-create table guest id=aid()&name=string(100)&position=string(50)&time=time()&card_id=string(50)&card_type=string(50)&address=string(256)&birthdate=string(50)&birthplace=string(100)&gender=int(1,0)&phone=string(20)&email=string(100)&religion=string(50)&nationality=string(50)&greet=string(20)&guest_type=string(50)&group_name=string(50)&member_id=int(10,0)
-------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-*** LOGIN ***
-------------------------------------------------------------------------------------------------------
---------------- steps ---------------
-- browser --> server:request:otp   --> /api/eva/?query=hotelget.otp/
-              --> response:otp
-          --> browser:generate qr_code from otp
-          --> server:check_otp_update
-              --> response:new_access_data
-          --> browser:generate_new_app from new_access_data
-- phone   --> browser:scan_otp
-          --> server:oauth
-              - otp   = scanned_otp
-              --> response:new_access_data
-          --> phone:mark_as_success
-------------------------------------------------------------------------------------------------------
-auth
-- id        aid()
-- otp       string(100)
-- time      time()
-- used      int(1,0)
-- token     string(100)
---------------------------
-create table auth id=aid()&otp=string(100)&time=time()&used=int(1,0)&token=string(100)
-------------------------------------------------------------------------------------------------------
-access
-- id       aid()
-- uid      int(10)
-- active   int(1,1)
-- time     time()
-- token    string(100)
-- userdata string(1024) // json
-- platform string(100)
--------------------------------
-create table access id=aid()&uid=int(10)&active=int(1,1)&time=time()&token=string(100)&userdata=string(1024)&platform=string(100)
-------------------------------------------------------------------------------------------------------
-employee
-- id          aid()
-- name        string()
-- position    string()  // divisions -->
-- time        time()
-- card_id     string()
-- card_type   string()
-- address     string()
-- birthdate   string()
-- birthplace  string()
-- gender      int()
-- phone       string()
-- email       string()
-- religion    string()
-- nationality string()
-- division    string()
-----------------------
-create table employee id=aid()&name=string(100)&position=string(100)&time=time()&card_id=string(50)&card_type=string(50)&address=string(256)&birthdate=string(100)&birthplace=string(100)&gender=int(1,0)&phone=string(20)&email=string(100)&religion=string(50)&nationality=string(50)&division=string(100)
-------------------------------------------------------------------------------------------------------
-user
-- id         aid()
-- username   string(100)
-- passcode   string(100)
-- privilege  int(2,1)
-- scope      string(100)
-- active     int(1,1)
-- type       string(100)
-- profile_id int(10)
-- time       time()
-------------------------
-create table user id=aid()&username=string(100)&passcode=string(100)&privilege=int(2,1)&scope=string(100)&active=int(1,1)&type=string(100)&profile_id=int(10)&position=string(100)
-------------------------------------------------------------------------------------------------------
 - position --> - front_office
                  - receptionist
                  - porter/concierge
@@ -378,35 +887,6 @@ create table user id=aid()&username=string(100)&passcode=string(100)&privilege=i
 - 
 
 ------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------
-hidupku tanpa cintamu bagai malam tanpa bintang
-cintaku tanpa sambutmu bagai panas tanpa hujan
-jiwaku berbisik lirih ku harus milikimu
-
-chorus:
-    aku bisa membuatmu jatuh cinta kepadaku meski kau tak cinta kepadaku
-    beri sedikit waktu biar cinta datang karena telah terbiasa
-
-simpan mawar yang ku beri mungkin wanginya mengilhami
-sudikah dirimu untuk kenali aku dulu
-sebelum kau ludahi aku
-sebelum kau robek hatiku
-------------------------------------------------------------------------------------------------------
-aku tak mengerti apa yang kurasa rindu yang tak pernah begitu hebatnya
-aku mencintaimu lebih yang kau tau meski kau takkan pernah tau
-
-aku persembahkan hidupku untukmu telah relakan hatiku padamu
-namun kau masih bisu diam seribu bahasa dan hati kecilku bicara
-
-chorus:
-    baru kusadari cintaku bertepuk sebelah tangan
-    kau buat remuk seluruh hatiku
-
-semoga waktu akan mengilhami sisi hatimu yang beku
-semoga akan datang keajaiban hingga akhirnya kaupun mau
-aku mencintaimu lebih yang kau tau meski kau takkan pernah tau
-------------------------------------------------------------------------------------------------------
-
 
 
 
