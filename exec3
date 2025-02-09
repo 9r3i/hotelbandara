@@ -1,0 +1,1 @@
+ai abl app config && mv -fv hotel.app ../api/appbase
